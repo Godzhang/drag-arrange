@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>drag-arrange</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<style>
+	.box{margin: 100px 0 0 100px;}
+	.item{display: block;width: 100px;height: 100px;line-height: 100px;text-align: center;border: 1px solid #000;margin: 50px;}
+	.bar{width: 100px;height: 30px;background: #08c;cursor: pointer;}
+	</style>
+</head>
+<body>
+
+<div class="box">
+	<div class="item"><div class="bar"></div></div>
+	<div class="item"><div class="bar"></div></div>
+	<div class="item"><div class="bar"></div></div>
+	<div class="item"><div class="bar"></div></div>
+	<div class="item"><div class="bar"></div></div>
+</div>
+
+
+<script src="js/script.js"></script>
+<script>
+var drag = new Drag({
+	targetClass: "item"
+	// dragSelector: "bar"
+});
+</script>
+</body>
+</html>
