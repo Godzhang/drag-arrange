@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="css/reset.css">
 	<style>
 	.box{margin: 100px 0 0 100px;}
-	.item{display: block;width: 100px;height: 100px;line-height: 100px;text-align: center;border: 1px solid #000;margin: 50px;}
+	.item{display: inline-block;width: 100px;height: 100px;line-height: 100px;text-align: center;border: 1px solid #000;margin: 50px;}
 	.bar{width: 100px;height: 30px;background: #08c;cursor: pointer;}
 	</style>
 </head>
@@ -25,8 +25,11 @@
 <script>
 var drag = new Drag({
 	targetClass: "item",
-	container: document.getElementById("box")
-	// dragSelector: "bar"
+	container: document.getElementById("box"),
+	dragSelector: "bar",
+	dragDone: function(item, list){
+		item.style.background = "#ff7300";
+	}
 });
 </script>
 </body>
